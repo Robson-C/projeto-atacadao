@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    Verde: #00FF18
+    Laranja: #f86f14
+
+*/
+
+
+
+/*Gerais*/
+    :root {
+        --cor1: #0d9b2c;
+        --cor2: #f86f14;
+    }
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body, html {
+        width: 100vw;
+        height: 100vh;
+    }
+/*Fim Gerais*/
+
+
+/*Banner*/
+    div#banner {
+        height: 200px;
+        background-image: url("../imagens/atacadao-banner.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 1px 1px 20px black;
+    }
+/*Fim Banner*/
+
+/*Menu*/
+    nav#menu > ul{
+        list-style-type: none;
+        overflow: hidden;/*TESTAR*/
+        background-color: var(--cor2);
+        width: 100%;
+        display: flex;
+    }
+
+    nav#menu >ul > hr {
+        border: 0;
+        background-color: white;
+        width: 1px;
+    }
+
+    nav#menu > ul > li {
+        width: calc(100%/7);
+    }
+
+    nav#menu > ul > li > a {
+        display: block;
+        font-size: 1.1em;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        transition: font-size 0.3s;
+    }
+    nav#menu > ul > li > a:hover {
+        background-color: var(--cor1);
+        font-size: 1.3em;
+        transition: font-size 0.3s;
+    }
+
+
+
+
+/*Fim Menu*/
