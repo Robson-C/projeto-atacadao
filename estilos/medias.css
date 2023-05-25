@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Breackpoints att-2023 
+Celular: até 600px
+Celulares Grandes: 601px até 768px
+Tablet: 769px até 992px
+Desktop: 993px até 1200px
+Telas Grandes: acima de 1200px
+cada media feature é um () separado, ex: @media screen and (min-width: 768px) and (max-width: 992px){}
+*/
+
+@media screen and (min-width: 701px) {
+    
+    body {
+        display: flex;
+        height: 100vh;
+    }
+
+    main.index {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        gap: 30px;
+    }
+
+    main.index > a.setor {
+        width: 200px;
+        line-height: 60px;
+    }
+
+    section#lateral {
+        display: flex;
+        height: 100vh;
+    }
+
+    section#lateral {
+        width: 300px;
+        height: 100%;
+        background-color: white;
+        border-right: 1px solid black;
+    }
+
+    section#lateral > menu#itens-lateral > ul > li {
+        width: 300px;
+        border-bottom: 1px solid black;
+    }
+
+    section#lateral > menu#itens-lateral > ul > li > a {
+        display: block;
+        width: 100%;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        line-height: 50px;
+    }
+
+    section#manuais {
+        width: calc(100vw - 300px);
+        margin-top: 0;
+    }
+
+    section#manuais > iframe#tela {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main.index > a.setor{
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+
+
+    main.index {
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+
+
+}

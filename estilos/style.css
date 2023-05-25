@@ -11,8 +11,8 @@
 
 /*Gerais*/
     :root {
-        --cor1: #0d9b2c;
-        --cor2: #f86f14;
+        --cor1: #08661d;
+        --cor2: #ff7300;
     }
 
     * {
@@ -22,89 +22,119 @@
         box-sizing: border-box;
     }
 
-    body, html {
-        width: 100vw;
-        height: 100vh;
+    html, body {
+        width: 100%;
         background-color: lightgray;
     }
+
+
+    body {
+        background-color: black; /*Cor de fundo, só aparece caso demore carregar a imagem abaixo*/
+        background-image: url('../imagens/atacadao.jpeg'); /*Não é uma imagem do conteúdo, apenas de fundo*/
+        background-position: center center; /*Posicionando de onde fica o foco na imagem - Coluna Linha*/
+        background-repeat: no-repeat; /*Repetição da imagem caso ela não ocupe o espaço inteiro*/
+        background-size: cover; /*Força imagem ocupar o espaço inteiro da página*/
+        background-attachment: fixed; /*Trava a imagem no lugar, rola apenas o conteúdo mas não a imagem*/
+    }
+
 /*Fim Gerais*/
 
-
-/*Banner*/
-    div#banner {
-        height: 200px;
-        background-image: url("../imagens/atacadao-banner.png");
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 2em;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 1px 1px 20px black;
-    }
-/*Fim Banner*/
-
-/*Menu*/
-    #menu{
+/*Header*/
+    header {
+        position: absolute;
         width: 100vw;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    #menu > ul {
-        display: flex;
-        background-color: var(--cor2);
-        list-style: none;
-    }
-
-    #menu > ul > li {
-        width: calc(100%/7);
-        height: 50px;
-    }
-
-    #menu a {   /*Serve para link do menu e do dropdown*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        color: white;
-        text-decoration: none;
-        line-height: 50px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        transition: font-size 0.3s, text-shadow .3s;
-    }
-
-    #menu a:hover {
-        background-color: var(--cor1);
-        font-size: 1.1em;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        transition: font-size 0.3s, text-shadow .3s;
-    }
-
-    #menu hr {
-        border: 0;
-        background-color: white;
-        
-        width: 0.91px;
-    }
-
-
-
-    .dropdown-list {
-        display: none;
-        list-style: none;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
-        transition: display 1s;
-    }
-
-    .dropdown-menu:hover > .dropdown-list {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--cor2);
-        list-style: none;
+        background-color: rgb(150, 150, 150);
     }
     
+    span#burguer {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    span#burguer:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    menu#itens {
+        display: none;
+    }
+    
+    menu#itens > ul {
+        list-style-type: none;
+    }
+    
+    menu#itens > ul > li > a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgba(87, 87, 87);
+        color: white;
+        border-top: 2px solid gray;
+    }
+    
+    menu#itens > ul > li > a:hover {
+        background-color: gray;
+    }
+    
+/*Fim Header*/
 
+/*Main*/
+    main.index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-/*Fim Menu*/
+    main.index > a.setor {
+        width: 300px;
+        margin: 20px auto;
+        background-color: var(--cor2);
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.2em;
+        color: white;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5); ;
+        border-radius: 15px;
+        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+        transition: font-size .3s, transform .3s;
+    }
+
+    main.index > a.setor:hover {
+        background-color: var(--cor1);
+        font-size: 1.4em;
+        box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05) translate(3px, -3px);
+        transition: font-size .3s, transform .3s;
+    }
+
+    main.setor {
+        display: flex;
+    }
+
+    section#lateral {
+        display: none;
+    }
+    
+    section#manuais {
+        display: flex;
+        width: 100%;
+        margin-top: 44px;
+    }
+
+    section#manuais > iframe#tela {
+        width: 100%;
+        height: calc(100vh - 44px);
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid black;
+    }
+
+    
+/*Fim Main*/
