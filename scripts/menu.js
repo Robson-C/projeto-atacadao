@@ -22,3 +22,4 @@ function mudouTamanho(){
 function escolhi(){
     itens.style.display = 'none'
 }
+

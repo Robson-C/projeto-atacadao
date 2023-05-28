@@ -27,7 +27,6 @@
         background-color: lightgray;
     }
 
-
     body {
         background-color: black; /*Cor de fundo, só aparece caso demore carregar a imagem abaixo*/
         background-image: url('../imagens/atacadao.jpeg'); /*Não é uma imagem do conteúdo, apenas de fundo*/
@@ -67,12 +66,23 @@
     menu#itens > ul {
         list-style-type: none;
     }
+
+    #setor {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+    }
     
+    #setor > option {
+        font-size: 1.4em;
+    }
+
     menu#itens > ul > li > a {
         display: block;
         padding: 10px;
         text-decoration: none;
         text-align: center;
+        font-weight: bold;
         background-color: rgba(87, 87, 87);
         color: white;
         border-top: 2px solid gray;
@@ -85,35 +95,7 @@
 /*Fim Header*/
 
 /*Main*/
-    main.index {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
-    main.index > a.setor {
-        width: 300px;
-        margin: 20px auto;
-        background-color: var(--cor2);
-        text-decoration: none;
-        text-align: center;
-        line-height: 50px;
-        font-size: 1.2em;
-        color: white;
-        text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5); ;
-        border-radius: 15px;
-        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
-        transition: font-size .3s, transform .3s;
-    }
-
-    main.index > a.setor:hover {
-        background-color: var(--cor1);
-        font-size: 1.4em;
-        box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05) translate(3px, -3px);
-        transition: font-size .3s, transform .3s;
-    }
 
     main.setor {
         display: flex;

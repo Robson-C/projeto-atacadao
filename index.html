@@ -5,22 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Guarapuava 260</title>
+    <title>Manuais</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/medias.css">
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/seletor.js"></script>
 </head>
-<body>
-    
-    <main class="index">
-        <a href="loja.html" class="setor" target="_self" rel="next"><strong>Loja</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>Frios</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>Assistente ADM</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>RM</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>Estoquista</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>FCA</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>Cadastro</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>PPE</strong></a>
-        <a href="#" class="setor" target="_self" rel="next"><strong>Deposito</strong></a>
+<body onresize="mudouTamanho()" on>
+
+    <header>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li>
+                    <select name="setor" id="setor" onchange="escolheSetor(this.value)">
+                        <option value="" selected disabled>Escolha o Setor</option>
+                        <option value="loja">Loja</option>
+                        <option value="frios">Frios</option>
+                        <option value="adm">Assistente ADM</option>
+                        <option value="rm">RM</option>
+                        <option value="estoquista">Estoquista</option>
+                        <option value="fca">FCA</option>
+                        <option value="cadastro">Cadastro</option>
+                        <option value="ppe">PPE</option>
+                        <option value="deposito">Deposito</option>
+                    </select>
+                </li>
+                <li><a href="setor/loja/rotina-manha.html" target="frame" onclick="escolhi()">Rotinha da Manhã</a></li>
+                <li><a href="setor/loja/rotina-tarde.html" target="frame" onclick="escolhi()">Rotinha da Tarde</a></li>
+                <li><a href="setor/loja/rotina-noite.html" target="frame" onclick="escolhi()">Rotinha da Noite</a></li>
+                <li><a href="setor/loja/erros-comuns.html" target="frame" onclick="escolhi()">Erros Comuns</a></li>
+                <li><a href="setor/loja/manuais-pdf.html" target="frame" onclick="escolhi()">Manuais PDF</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main class="setor">
+        <section id="lateral">
+            <menu id="itens-lateral">
+                <ul>
+                    <li>
+                        <select name="setor-lateral" id="setor-lateral" onchange="escolheSetor(this.value)">
+                            <option value="" selected disabled>Escolha o Setor</option>
+                            <option value="loja">Loja</option>
+                            <option value="frios">Frios</option>
+                            <option value="adm">Assistente ADM</option>
+                            <option value="rm">RM</option>
+                            <option value="estoquista">Estoquista</option>
+                            <option value="fca">FCA</option>
+                            <option value="cadastro">Cadastro</option>
+                            <option value="ppe">PPE</option>
+                            <option value="deposito">Deposito</option>
+                        </select>
+                    </li>
+                    <li><a href="setor/loja/rotina-manha.html" target="frame">Rotinha da Manhã</a></li>
+                    <li><a href="setor/loja/rotina-tarde.html" target="frame">Rotinha da Tarde</a></li>
+                    <li><a href="setor/loja/rotina-noite.html" target="frame">Rotinha da Noite</a></li>
+                    <li><a href="setor/loja/erros-comuns.html" target="frame">Erros Comuns</a></li>
+                    <li><a href="setor/loja/manuais-pdf.html" target="frame">Manuais PDF</a></li>
+                </ul>
+            </menu>
+        </section>
+
+        <section id="manuais">
+            <object data="setor/avisos.html" id="tela" name="frame"></object>
+        </section>
+        
     </main>
 
 </body>
